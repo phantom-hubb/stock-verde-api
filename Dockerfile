@@ -2,7 +2,7 @@
 FROM amazoncorretto:17 AS builder
 WORKDIR /app
 COPY . .
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 # O si usas el maven instalado en el sistema: RUN mvn clean package -DskipTests
 
 # Etapa 2: Ejecutar la aplicación con una imagen ligera
