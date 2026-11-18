@@ -1,11 +1,9 @@
-# Etapa 1: Compilar el proyecto con Maven y Java 17
-FROM amazoncorretto:17 AS builder
+# Usamos una imagen oficial de Maven con Java 17 integrado
+FROM maven:3.9.6-amazoncorretto-17 AS builder
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
-# O si usas el maven instalado en el sistema: RUN mvn clean package -DskipTests
 
-# Etapa 2: Ejecutar la aplicación con una imagen ligera
 FROM amazoncorretto:17-alpine
 WORKDIR /app
 COPY --from=builder /app/target/rest-stockverde-0.0.1-SNAPSHOT.jar app.jar
