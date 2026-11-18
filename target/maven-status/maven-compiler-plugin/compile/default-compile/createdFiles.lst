@@ -1,0 +1,7 @@
+com\phantom\pe\reststockverde\controller\StockverdeController.class
+com\phantom\pe\reststockverde\model\Stockverde.class
+com\phantom\pe\reststockverde\service\StockverdeService.class
+com\phantom\pe\reststockverde\RestStockverdeApplication.class
+com\phantom\pe\reststockverde\config\ApiTokenInterceptor.class
+com\phantom\pe\reststockverde\config\WebConfig.class
+com\phantom\pe\reststockverde\repository\IStockverde.class
